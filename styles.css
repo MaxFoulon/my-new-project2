@@ -9,10 +9,22 @@ body {
   justify-content: start;
   padding-top: 30px;
 }
-
+html, body {
+  overflow: hidden;
+}
+.hidden {
+  visibility: hidden;
+}
+.avoid-click {
+  pointer-events: none;
+}
+#start-game {
+  color: #FEF2BF;
+  text-shadow: 0 0 10px #fff, 0 0 20px #8d008d, 0 0 30px #560056;
+  font-family: 'Press Start 2P', cursive;
+}
 #level-title {
   font-size: 3rem;
-  margin: 5%;
   color: #FEF2BF;
   text-shadow: 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #f0f;
   font-family: 'Press Start 2P', cursive;
@@ -24,9 +36,9 @@ body {
   height: 500px;
   width: 500px;
   position: relative;
-  border: 10px solid #222;
-  margin: 60px auto 0 auto;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.2) inset;
+  border: 5px solid #222;
+  margin: 30px auto 0 auto;
+  box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 20px rgba(255, 255, 255, 0.1) inset;
 }
 
 #green, #red, #yellow, #blue {
@@ -75,12 +87,12 @@ body {
 }
 
 #inner-circle {
+  background: linear-gradient(to right, #000f1e, #081654);
   position: absolute;
-  background: #3b3b3b;
   border-radius: 50%;
-  height: 250px;
-  width: 250px;
-  border: 10px solid #222;
+  height: 200px;
+  width: 200px;
+  border: 5px solid #222;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -155,7 +167,7 @@ body {
 body.game-over {
   background: red;
   background-size: contain;
-  opacity: 1 !important;
+  opacity: 1
 }
 
 #controls {
@@ -166,7 +178,7 @@ body.game-over {
 
 #start-btn,
 #restart-btn {
-  padding: 15px 30px;
+  padding: 15px 40px;
   font-size: 1rem;
   font-family: 'Press Start 2P', cursive;
   background: linear-gradient(to bottom, #f0f0f0, #ccc);
@@ -175,6 +187,7 @@ body.game-over {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-left: 30px;
 }
 
 #start-btn:hover,
