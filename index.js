@@ -24,7 +24,6 @@ document.getElementById("start-btn").addEventListener("click", function () {
 
 
 function nextSequence() {
-    // Désactive les clics sur les boutons
     document.querySelectorAll(".btn").forEach(button => {
         button.classList.add("avoid-click");
     });
