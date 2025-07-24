@@ -18,6 +18,12 @@ html, body {
 .avoid-click {
   pointer-events: none;
 }
+.high-score {
+  font-size: 1rem;
+  color: #FEF2BF;
+  text-shadow: 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #f0f;
+  font-family: 'Press Start 2P', cursive;
+}
 #start-game {
   color: #FEF2BF;
   text-shadow: 0 0 10px #fff, 0 0 20px #8d008d, 0 0 30px #560056;

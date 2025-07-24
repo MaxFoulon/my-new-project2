@@ -3,6 +3,7 @@ let gamePattern = [];
 let userClickedPattern = [];
 let started = false;
 let level = 0;
+let highestLevel = 0;
 
 function startGame() {
     document.querySelector("h1").textContent = "Level " + level;
@@ -24,6 +25,10 @@ document.getElementById("start-btn").addEventListener("click", function () {
 
 
 function nextSequence() {
+    if (level > highestLevel) {
+        highestLevel = level;
+        document.querySelector(".high-score").textContent = "High Score: " + highestLevel;
+    }
     document.querySelectorAll(".btn").forEach(button => {
         button.classList.add("avoid-click");
     });
